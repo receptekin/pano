@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <form id="form">
+        <div class="container_full m-auto p-5 ">
+            <div class="container ">
+                <div class="mb-3 border border-1 p-3">
+                    <div class="form-check form-check-inline">
+                        <input value="kesinsiparis" name="kesinsiparis" type="radio" id="kesinsiparis"
+                            class="form-check-input">
+                        <label class="form-check-label" for="kesinsiparis">KESİN
+                            SİPARİŞ</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input value="tekif" name="tekif" type="radio" id="tekif" class="form-check-input">
+                        <label class="form-check-label" for="tekif">TEKLİF
+                            TALEBİ</label>
+                    </div>
+                </div>
+                <div class="mb-3 p-2 row">
+                    <div class="col-6 border border-1 p-3">
+                        <div class="form-group row mb-3">
+                            <label class="col-form-label col-lg-3">Firma</label>
+                            <div class="col-lg-9">
+                                <input name="firma" type="text" id="firma" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <label class="col-form-label col-lg-3">Sipariş No</label>
+                            <div class="col-lg-9">
+                                <input name="siparis_no" type="text" id="siparis_no" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <label class="col-form-label col-lg-3">Sipariş Tarihi</label>
+                            <div class="col-lg-9">
+                                <input name="siparis_tarihi" type="text" value="12.11.2024" id="siparis_tarihi"
+                                    disabled=" disabled" class="aspNetDisabled form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <label class="col-form-label col-lg-3">İstenilen Teslim Tarihi</label>
+                            <div class="col-lg-9">
+                                <input name="istanilen_teslim" type="date" id="istanilen_teslim" class="form-control"
+                                    placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-3">
+                            <label class="col-form-label col-lg-3">Müşteri Referansı</label>
+                            <div class="col-lg-9">
+                                <input name="musteri_referans" type="text" id="musteri_referans" class="form-control"
+                                    placeholder="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-6 border border-1 p-3">
+                        <div class="form-group row mb-3">
+                            <label class="col-form-label col-lg-3">Adet</label>
+                            <div class="col-lg-9">
+                                <input name="adet" type="text" id="adet" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <label class="col-form-label col-lg-3">Durak Sayısı</label>
+                            <div class="col-lg-9">
+                                <input name="durak_sayisi" type="text" id="durak_sayisi" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <label class="col-form-label col-lg-3">Kat yüksekliği</label>
+                            <div class="col-lg-9">
+                                <input name="durak_sayisi" type="text" id="durak_sayisi" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <label class="col-form-label col-lg-3">Toplam Seyir Mesafesi</label>
+                            <div class="col-lg-9">
+                                <input name="durak_sayisi" type="text" id="durak_sayisi" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-3">
+                            <div class="col-lg-3">
+                                <label class="col-form-label">Şebeke Gerilimi</label>
+                            </div>
+                            <div class="col-lg-9">
+                                <span class="form-label small d-block">VAC (Faz-Faz Arası)</span>
+                                <div class="form-check form-check-inline">
+                                    <input value="rbnotrVar" name="vac" type="radio" id="vac" class="form-check-input">
+                                    <label class="form-check-label" for="vac">Nötr
+                                        Var</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input value="Notr" name="Notr" type="radio" id="Notr" class="form-check-input">
+                                    <label class="form-check-label" for="Notr">Nötr
+                                        Yok</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-3">
+                            <label class="col-form-label col-lg-3">Kabin Hızı</label>
+                            <div class="col-lg-9">
+                                <div class="input-group">
+                                    <input name="kabin_hizi" type="number" id="kabin_hizi" class="form-control" max="4">
+                                    <span class="input-group-text" id="kabin_hizi">m/s</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row ">
+                    <div class="col-lg-2 border border-1 p-3">
+                        <div class="mb-3">
+                            <label class="form-label d-block bg-dark-grey p-2">KUMANDA TİPİ</label>
+                            <div class="form-check">
+                                <input value="kumadantipi_basit" name="kumadantipi" type="radio" id="kumadantipi_basit"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="kumadantipi_basit">Basit
+                                    Kumanda</label>
+                            </div>
+                            <div class="form-check">
+                                <input value="kumadantipi_tek" name="kumadantipi_tek" type="radio" id="kumadantipi_tek"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="kumadantipi_tek">Tek
+                                    Buton İnişte Toplama</label>
+                            </div>
+                            <div class="form-check">
+                                <input value="kumadantipi_cift" name="kumadantipi_cift" type="radio"
+                                    id="kumadantipi_cift" class="form-check-input">
+                                <label class="form-check-label" for="kumadantipi_cift">Çift
+                                    Buton Toplama</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-2 border border-1 p-3">
+                        <div class="mb-3">
+                            <label class="form-label d-block bg-dark-grey p-2">KART MODELİ</label>
+                            <div class="form-check">
+                                <input value="econel" name="econel" type="radio" id="econel" class="form-check-input">
+                                <label class="form-check-label" for="econel">Econel</label>
+                            </div>
+                            <div class="form-check">
+                                <input value="konelce" name="konelce" type="radio" id="konelce"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="konelce">Konelce</label>
+                            </div>
+                            <div class="form-check">
+                                <input value="kontrolA3" name="kontrolA3" type="radio" id="kontrolA3"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="kontrolA3">Kontrol
+                                    A3</label>
+                            </div>
+                            <div class="form-check">
+                                <input value="RevoLc" name="RevoLc" type="radio" id="RevoLc" class="form-check-input">
+                                <label class="form-check-label" for="RevoLc">Revo
+                                    LC</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2 border border-1 p-3">
+                        <div class="mb-3">
+                            <label class="form-label d-block bg-dark-grey p-2">INVERTER</label>
+                            <div class="form-check">
+                                <input value="RevoBox" name="RevoBox" type="radio" id="RevoBox"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="RevoBox">Revo
+                                    Box </label>
+                            </div>
+                            <div class="form-check">
+                                <input value="RevoDrive" name="RevoDrive" type="radio" id="RevoDrive"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="RevoDrive">Revo
+                                    Drive</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2 border border-1 p-3">
+                        <div class="mb-3">
+                            <label class="form-label d-block bg-dark-grey p-2">DİL</label>
+                            <div class="form-check">
+                                <input value="DilTurk" name="DilTurk" type="radio" id="DilTurkce"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="DilTurk">Türkçe</label>
+                            </div>
+                            <div class="form-check">
+                                <input value="Dilİng" name="Dilİng" type="radio" id="Dilİng" class="form-check-input">
+                                <label class="form-check-label" for="Dilİng">İngilizce</label>
+                            </div>
+                            <div class="form-check">
+                                <input value="Diluter" name="ctl00$ContentPlaceHolder1$dil" type="radio" id="Diluter"
+                                    class="form-check-input">
+                                <input name="Diluter" type="text" id="Diluter" class="form-control">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2 border border-1 p-3">
+                        <div class="mb-3">
+                            <label class="form-label d-block bg-dark-grey p-2">GRUP KUMANDA</label>
+                            <div class="form-check">
+                                <input value="Simplex" name="Simplex" type="radio" id="Simplex"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="Simplex">Simpleks</label>
+                            </div>
+                            <div class="form-check">
+                                <input value="Dubleks" name="Dubleks" type="radio" id="Dubleks"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="Dubleks">Dubleks</label>
+                            </div>
+                            <div class="form-check">
+                                <input value="uclugroup" name="uclugroup" type="radio" id="uclugroup"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="uclugroup">3'lü
+                                    Grup</label>
+                            </div>
+                            <div class="form-check">
+                                <input value="dortlugroup" name="dortlugroup" type="radio" id="dortlugroup"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="dortlugroup">4'lü
+                                    Grup</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2 border border-1 p-3">
+                        <div class="mb-3">
+                            <label class="form-label d-block bg-dark-grey p-2">STANDART</label>
+                            <div class="form-check">
+                                <input value="standart_81-1/2" name="standart" type="radio" id="standart_81-1/2"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="standart_81-1/2">EN81-1/2</label>
+                            </div>
+                            <div class="form-check">
+                                <input value="standart_81-1/2+A3" name="standart_81-1/2+A3" type="radio"
+                                    id="standart_81-1/2+A3" class="form-check-input">
+                                <label class="form-check-label" for="standart_81-1/2+A3">EN81-1/2+A3</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row border">
+                    <div class="col-12 bg-dark-grey text-center"><strong>TAHRİK SİSTEMİ</strong></div>
+                    <div class="col-6">
+                        <div class="mb-3 border mt-3">
+                            <div class="form-group row mb-3 mt-3">
+                                <label class=" col-lg-3">Elektrikli</label>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <div class="col-lg-3">
+                                    <label class="">Motor Tipi</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="form-check form-check-inline">
+                                        <input value="dislili" name="dislili" type="radio" id="dislili"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="dislili">Dişlili(Asenkron)</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input value="dislili" name="dislili" type="radio" id="dislili"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="dislili">Dişlisiz(Senkron)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <div class="col-lg-3">
+                                    <label class="">Tahrik Tipi</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="form-check">
+                                        <input value="tahriktipitekhizli" name="tahriktipitekhizli" type="radio"
+                                            id="tahriktipitekhizli" class="form-check-input">
+                                        <label class="form-check-label" for="tahriktipitekhizli">Tek
+                                            Hızlı</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="tahriktipicifthizli" name="tahriktipicifthizli" type="radio"
+                                            id="tahriktipicifthizli" class="form-check-input">
+                                        <label class="form-check-label" for="tahriktipicifthizli">Çift
+                                            Hızlı</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="tahriktipivvf" name="tahriktipivvf" type="radio"
+                                            id="tahriktipivvf" class="form-check-input">
+                                        <label class="form-check-label" for="tahriktipivvf">VVVF</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <div class="col-lg-3">
+                                    <label class="">Enkoder</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="form-check form-check-inline">
+                                        <input value="encodervar" name="encodervar" type="radio" id="encodervar"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="encodervar">Var</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input value="encoderyok" name="encoderyok" type="radio" id="encoderyok"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="encoderyok">Yok</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-3">Varsa, Enkoder Markası</label>
+                                <div class="col-lg-9">
+                                    <input name="enkodermarka" type="text" id="enkodermarka" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-3">Motor Gücü</label>
+                                <div class="col-lg-9">
+                                    <div class="input-group">
+                                        <input name="motorgucu" type="text" id="motorgucu" class="form-control">
+                                        <span class="input-group-text" id="motorgucu">KW</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-3">Motor Akımı</label>
+                                <div class="col-lg-9">
+                                    <div class="input-group">
+                                        <input name="motorakimi" type="text" id="motorakimi" class="form-control"
+                                            aria-describedby="motorakimi-addon">
+                                        <span class="input-group-text" id="motorakimi">A</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-3">Motor Marka / Modeli</label>
+                                <div class="col-lg-9">
+                                    <div class="input-group">
+                                        <input name="motormarka" type="text" id="motormarka" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-3">Fren</label>
+                                <div class="col-lg-9">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="">
+                                                <label class="col-form-label col-lg-12">Voltaj</label>
+                                                <div class="col-lg-12">
+                                                    <div class="input-group">
+                                                        <input name="frenvoltaj" type="text" id="frenvoltaj"
+                                                            class="form-control" aria-describedby="frenvoltaj">
+                                                        <span class="input-group-text" id="frenvoltaj">VDC/VAC</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="">
+                                                <label class="col-form-label col-lg-12">Akım</label>
+                                                <div class="col-lg-12">
+                                                    <div class="input-group">
+                                                        <input name="akim" type="text" id="akim" class="form-control"
+                                                            aria-describedby="akim-addon">
+                                                        <span class="input-group-text" id="akim">A</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3 border">
+                            <div class="col-12 bg-dark-grey text-center mb-3"><strong>KATA GETİRME</strong>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input value="upskurtarma" name="upskurtarma" type="radio" id="upskurtarma"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="upskurtarma">UPS
+                                            KURTARMA</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="akukurtarma" name="akukurtarma" type="radio" id="akukurtarma"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="akukurtarma">AKÜLÜ
+                                            KURTARMA</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3 border">
+                            <div class="col-12 bg-dark-grey text-center mb-3"><strong>A3 UYGULAMASI</strong>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input value="senkron" name="senkron" type="radio" id="senkron"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="senkron">Senkron
+                                            Makine Fren Blokları üzerinden</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="Asenkron" name="Asenkron" type="radio" id="Asenkron"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="Asenkron">Asenkron
+                                            Makine Kasnak Freni ile</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="halattertibati" name="halattertibati" type="radio"
+                                            id="halattertibati" class="form-check-input">
+                                        <label class="form-check-label" for="halattertibati">Halat
+                                            Tutma Tertibatı ile </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="hizregulator" name="hizregulator" type="radio" id="hizregulator"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="hizregulator">Hız
+                                            regülatörü + Paraşüt Fren üzeriden </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <label class="form-label d-block"><strong>A3 Hız Regülatörü
+                                            Markası</strong></label>
+                                    <div class="form-check form-check-inline">
+                                        <input value="a3hizregmarkavar" name="a3hizregmarkavar" type="radio"
+                                            id="a3hizregmarkavar" class="form-check-input">
+                                        <label class="form-check-label" for="a3hizregmarkavar">Var</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input value="a3hizregmarka24vdc" name="a3hizregmarka24vdc" type="radio"
+                                            id="a3hizregmarka24vdc" class="form-check-input">
+                                        <label class="form-check-label" for="a3hizregmarka24vdc">24VDC</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input value="a3hizregmarka190vdc" name="a3hizregmarka190vdc" type="radio"
+                                            id="a3hizregmarka190vdc" class="form-check-input">
+                                        <label class="form-check-label" for="a3hizregmarka190vdc">190VDC</label>
+                                    </div>
+                                    <div class="form-check ">
+                                        <input value="a3hizregmarkayok" name="a3hizregmarkayok" type="radio"
+                                            id="a3hizregmarkayok" class="form-check-input">
+                                        <label class="form-check-label" for="a3hizregmarkayok">Yok</label>
+                                    </div>
+                                </div>
+                                <label class="col-form-label col-lg-12"><strong>Model</strong></label>
+                                <div class="col-lg-7">
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="a3model">A:</span>
+                                        <input name="a3model" type="text" id="a3model" class="form-control"
+                                            aria-describedby="a3model">
+
+                                    </div>
+                                </div>
+                                <label class="col-form-label col-lg-5">(Max.6A.)</label>
+                            </div>
+                        </div>
+                        <div class="mb-3 border">
+                            <div class="col-12 bg-dark-grey text-center mb-3"><strong>HIZ
+                                    REGÜLATÖRÜ</strong>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-5">Aşırı Hız Regülatörü Markası</label>
+                                <div class="col-lg-7">
+                                    <input name="asirihizregmarka" type="text" id="asirihizregmarka"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3 mt-3">
+                                <label class=" col-lg-5">Aşırı Hız Regülatörü Set ve Reset Butonları</label>
+                                <div class="col-lg-7">
+                                    <div class="form-check form-check-inline">
+                                        <input name="asirihizregmarkabutton" type="checkbox" id="asirihizregmarkabutton"
+                                            class="form-check-input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3 mt-3">
+                                <label class="col-form-label col-lg-12"><strong>Set Butonu Bobin Voltajı
+                                    </strong></label>
+                                <div class="col-lg-7">
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="hizregsetvolt">V:</span>
+                                        <input name="hizregsetvolt" type="text" id="hizregsetvolt" class="form-control"
+                                            aria-describedby="hizregsetvolt">
+
+                                    </div>
+                                </div>
+                                <label class="col-form-label col-lg-5">AC/DC</label>
+
+                            </div>
+
+                            <div class="form-group row mb-3 mt-3">
+                                <label class="col-form-label col-lg-12"><strong>Reset Butonu Bobin Voltajı
+                                    </strong></label>
+                                <div class="col-lg-7">
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="hizregresetvolt">V:</span>
+                                        <input name="hizregresetvolt" type="text" id="hizregresetvolt"
+                                            class="form-control" aria-describedby="hizregresetvolt">
+
+                                    </div>
+                                </div>
+                                <label class="col-form-label col-lg-5">AC/DC</label>
+
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="mb-3 border row">
+                            <div class="col-12 bg-dark-grey text-center mb-3"><strong>SEVİYE
+                                    YENİLEME</strong>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label d-block"><strong>Seviye Yenileme</strong></label>
+                                <div class="form-check form-check-inline">
+                                    <input value="seviyeyenilemevar" name="seviyeyenilemevar" type="radio"
+                                        id="seviyeyenilemevar" class="form-check-input">
+                                    <label class="form-check-label" for="seviyeyenilemevar">Var</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input value="seviyeyenilemeyok" name="seviyeyenilemeyok" type="radio"
+                                        id="seviyeyenilemeyok" class="form-check-input">
+                                    <label class="form-check-label" for="seviyeyenilemeyok">Yok</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3 border mt-3">
+                            <div class="form-group row mb-3 mt-3">
+                                <label class=" col-lg-3">Hidrolik</label>
+                                <div class="col-lg-9">
+                                    <div class="form-check form-check-inline">
+                                        <input name="hidrolik" type="checkbox" id="hidrolik" class="form-check-input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-3">Ünite Markası</label>
+                                <div class="col-lg-9">
+                                    <input name="hidrolikunitemarkasi" type="text" id="hidrolikunitemarkasi"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-3">Valf Modeli</label>
+                                <div class="col-lg-9">
+                                    <input name="hidrolikunitevalfmodeli" type="text" id="hidrolikunitevalfmodeli"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <div class="col-lg-3">
+                                    <label class="">Valf Tipi</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="form-check">
+                                        <input value="elektronikkartkontrolluvalf" name="elektronikkartkontrolluvalf"
+                                            type="radio" id="elektronikkartkontrolluvalf" class="form-check-input">
+                                        <label class="form-check-label" for="elektronikkartkontrolluvalf">Elektronik
+                                            Kart Kontrollü
+                                            Valf</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="mekanikvalf" name="mekanikvalf" type="radio" id="mekanikvalf"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="mekanikvalf">Mekanik
+                                            Valf</label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-3">Valf Voltajı</label>
+                                <div class="col-lg-9">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <span class="input-group-text" id="valfvoltajadet">Adet</span>
+                                            <input name="valfvoltajadet" type="text" id="valfvoltajadet"
+                                                class="form-control" aria-describedby="valfvoltajadet">
+                                        </div>
+                                        <div class="col-4">
+                                            <span class="input-group-text" id="valfvoltajvdc">VDC</span>
+                                            <input name="valfvoltajvdc" type="text" id="valfvoltajvdc"
+                                                class="form-control" aria-describedby="valfvoltajvdc">
+                                        </div>
+                                        <div class="col-4">
+                                            <span class="input-group-text" id="valfvoltajvac">VAC</span>
+                                            <input name="valfvoltajvac" type="text" id="valfvoltajvac"
+                                                class="form-control" aria-describedby="valfvoltajvac">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <div class="col-lg-3">
+                                    <label class="">Yol Verme Şekli</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="form-check">
+                                        <input value="yolvermedirekt" name="yolvermedirekt" type="radio"
+                                            id="yolvermedirekt" class="form-check-input">
+                                        <label class="form-check-label" for="yolvermedirekt">Direkt</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="yolvermeyildizucgen" name="yolvermeyildizucgen" type="radio"
+                                            id="yolvermeyildizucgen" class="form-check-input">
+                                        <label class="form-check-label" for="yolvermeyildizucgen">Yıldız /
+                                            Üçgen</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="yolvermesoftstarter" name="yolvermesoftstarter" type="radio"
+                                            id="yolvermesoftstarter" class="form-check-input">
+                                        <label class="form-check-label" for="yolvermesoftstarter">Soft
+                                            Starter</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-3">Motor Gücü</label>
+                                <div class="col-lg-9">
+                                    <div class="input-group">
+                                        <input name="hidrolikmotorgucu" type="text" id="hidrolikmotorgucu"
+                                            class="form-control" aria-describedby="hidrolikmotorgucu">
+                                        <span class="input-group-text" id="hidrolikmotorgucu">KW</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-3">Motor Akımı</label>
+                                <div class="col-lg-9">
+                                    <div class="input-group">
+                                        <input name="hidrolikmotorakimi" type="text" id="hidrolikmotorakimi"
+                                            class="form-control" aria-describedby="hidrolikmotorakimi">
+                                        <span class="input-group-text" id="hidrolikmotorakimi">A</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <div class="col-12">
+                                    <label class="form-label d-block"><strong>Acil İniş Valfi: (Acil indirme
+                                            işlemi UPS ile yapılmaktadır)</strong></label>
+                                    <div class="form-check form-check-inline">
+                                        <input value="acilinisvalfivar" name="acilinisvalfivar" type="radio"
+                                            id="acilinisvalfivar" class="form-check-input">
+                                        <label class="form-check-label" for="acilinisvalfivar">Var</label>
+                                    </div>
+
+
+                                    <div class="form-check form-check-inline">
+                                        <input value="acilinisvalfiyok" name="acilinisvalfiyok" type="radio"
+                                            id="acilinisvalfiyok" class="form-check-input">
+                                        <label class="form-check-label" for="acilinisvalfiyok">Yok</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <label class="form-label d-block"><strong>A3 Valfi
+                                            Markası</strong></label>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form-check form-check-inline">
+                                                <input value="a3valfmarkavar" name="a3valfmarkavar" type="radio"
+                                                    id="a3valfmarkavar" class="form-check-input">
+                                                <label class="form-check-label" for="a3valfmarkavar">Var</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="a3valfmarkavac">VAC:</span>
+                                                <input name="a3valfmarkavac" type="text" id="a3valfmarkavac"
+                                                    class="form-control" aria-describedby="a3valfmarkavac">
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="a3valfmarkavdc">VDC:</span>
+                                                <input name="a3valfmarkavdc" type="text" id="a3valfmarkavdc"
+                                                    class="form-control" aria-describedby="a3valfmarkavdc">
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-check ">
+                                                <input value="a3valfmarkayok" name="a3valfmarkayok" type="radio"
+                                                    id="a3valfmarkayok" class="form-check-input">
+                                                <label class="form-check-label" for="a3valfmarkayok">Yok</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="col-form-label col-lg-12"><strong>Model</strong></label>
+                                <div class="col-lg-7">
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="a3valfmodel">A:</span>
+                                        <input name="a3valfmodel" type="text" id="a3valfmodel" class="form-control"
+                                            aria-describedby="a3valfmodel">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3 border">
+                            <div class="col-12 bg-dark-grey text-center mb-3"><strong>KAPI
+                                    KUMANDASI</strong>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input value="kapikumanda1" name="kapikumanda1" type="radio" id="kapikumanda1"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="kapikumanda1">Kat
+                                            kapıları yarım
+                                            otomatik
+                                            kabin kapısı yok</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="kapikumanda2" name="kapikumanda2" type="radio" id="kapikumanda2"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="kapikumanda2">Kat
+                                            kapıları yarım
+                                            otomatik
+                                            kabin kapısı tam otomatik</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="kapikumanda3" name="kapikumanda3" type="radio" id="kapikumanda3"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="kapikumanda3">Kramer
+                                            kabin
+                                            kapısı</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="kapikumanda4" name="kapikumanda4" type="radio" id="kapikumanda4"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="kapikumanda4"> Kat ve
+                                            kabin kapıları
+                                            tam
+                                            otomatik</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-3">Otomatik kapı markası</label>
+                                <div class="col-lg-9">
+                                    <input name="kapikumandaotomatikkapimarka" type="text"
+                                        id="kapikumandaotomatikkapimarka" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-3">Otomatik kapı modeli</label>
+                                <div class="col-lg-9">
+                                    <input name="kapikumandaotomatikkapimodel" type="text"
+                                        id="kapikumandaotomatikkapimodel" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <div class="col-lg-3">
+                                    <label class="">Otomatik kapı tipi</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="form-check">
+                                        <input value="otomatikkapitip1" name="otomatikkapitip1" type="radio"
+                                            id="otomatikkapitip1" class="form-check-input">
+                                        <label class="form-check-label" for="otomatikkapitip1">1
+                                            Faz
+                                            Mekanik</label>
+                                        <span style="float:right">VAC (Motor Voltajı)</span>
+                                        <input name="otomatikkapitip2" type="text" id="otomatikkapitip2"
+                                            class="form-control"
+                                            style="float: right; width: 30px; padding: 0; margin: 0 10px;">
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="otomatikkapitip3" name="otomatikkapitip3" type="radio"
+                                            id="otomatikkapitip3" class="form-check-input">
+                                        <label class="form-check-label" for="otomatikkapitip3">3
+                                            Faz
+                                            Mekanik</label>
+                                        <span style="float:right">VAC (Motor Voltajı)</span>
+                                        <input name="otomatikkapitip4" type="text" id="otomatikkapitip4"
+                                            class="form-control"
+                                            style="float: right; width: 30px; padding: 0; margin: 0 10px;">
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="otomatikkapitip5" name="otomatikkapitip5" type="radio"
+                                            id="otomatikkapitip5" class="form-check-input">
+                                        <label class="form-check-label" for="otomatikkapitip5">Kontrol
+                                            kartlı</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="otomatikkapitip6" name="otomatikkapitip6" type="radio"
+                                            id="otomatikkapitip6" class="form-check-input">
+                                        <label class="form-check-label" for="otomatikkapitip6">VVVF
+                                            Invertörlü</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <label class="form-label d-block"><strong>LIR-POMP</strong></label>
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="form-check form-check-inline">
+                                                <input value="lirpomp1" name="lirpomp1" type="radio" id="lirpomp1"
+                                                    class="form-check-input">
+                                                <label class="form-check-label" for="lirpomp1">Var</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="form-check form-check-inline">
+                                                <input value="lirpomp2" name="lirpomp2" type="radio" id="lirpomp2"
+                                                    class="form-check-input">
+                                                <label class="form-check-label" for="lirpomp2">Mekanik</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="form-check form-check-inline">
+                                                <input value="lirpomp3" name="lirpomp3" type="radio" id="lirpomp3"
+                                                    class="form-check-input">
+                                                <label class="form-check-label" for="lirpomp3">Elektrikli </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="input-group">
+                                                <input value="lirpompv" name="lirpompv" type="radio" id="lirpompv"
+                                                    class="form-check-input">
+                                                <span class="input-group-text" style="padding: 0 5px; margin-left: 9px;"
+                                                    id="lirpompv">V:</span>
+                                                <input name="lirpompv" type="text" id="lirpompv" class="form-control"
+                                                    style="padding:0;" aria-describedby="lirpompv">
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="form-check form-check-inline">
+                                                <input value="lirpomp5" name="lirpomp5" type="radio" id="lirpomp5"
+                                                    class="form-check-input">
+                                                <label class="form-check-label" for="lirpomp5">Yok</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3 border">
+                            <div class="form-group row mb-3">
+                                <div class="col-lg-3">
+                                    <label class="">Kabin girişleri</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="form-check form-check-inline">
+                                        <input value="kabingirisitek" name="kabingirisitek" type="radio"
+                                            id="kabingirisitek" class="form-check-input">
+                                        <label class="form-check-label" for="kabingirisitek">Tek
+                                            Girişli</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input value="kabingirisicift" name="kabingirisicift" type="radio"
+                                            id="kabingirisicift" class="form-check-input">
+                                        <label class="form-check-label" for="kabingirisicift">Çift
+                                            Girişli</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-3">A-Girişi</label>
+                                <div class="col-lg-9">
+                                    <div class="input-group">
+                                        <input name="kabinAgirisi" type="text" id="kabinAgirisi" class="form-control"
+                                            aria-describedby="agirisi-addon">
+                                        <span class="input-group-text" id="kabinAgirisi">Katlarda</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label col-lg-3">B-Girişi</label>
+                                <div class="col-lg-9">
+                                    <div class="input-group">
+                                        <input name="kabinBgirisi" type="text" id="kabinBgirisi" class="form-control"
+                                            aria-describedby="bgirisi-addon">
+                                        <span class="input-group-text" id="kabinBgirisi">Katlarda</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row border">
+                    <input class="col-12 bg-dark-grey text-center p-3" type="radio" name="seri_tesisat" id="">
+                    <div class="col-12 bg-dark-grey text-center mb-3"><strong>SERİ TESİSAT</strong>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-lg-3">
+                            <label class="">KABİN KASEDİ ( COP )</label>
+                            <div>
+                                <input type="radio" name="tam_boy" id="">
+                                <label id="tam_boy">Tam Boy</label>
+                                <br>
+                                <input type="radio" name="yarım_boy" id="">
+                                <label id="yarım_boy">Yarım Boy</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="form-check form-check-inline">
+                                <input value="seriflexible" name="seriflexible" type="radio" id="seriflexible"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="seriflexible">FLEXİBLE VE KUYU
+                                    DİBİ
+                                    KABLOSU</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input value="serifiskilit" name="serifiskilit" type="radio" id="serifiskilit"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="serifiskilit">FİŞ
+                                    KİLİT TESİSATI</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input value="serifototsel" name="serifototsel" type="radio" id="serifototsel"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="serifototsel">FOTOSEL
+                                    VE KABLO TESİSATI</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-lg-3">
+                            <label>KAT KASEDİ ( LOP )</label>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="form-check form-check-inline">
+                                <input value="serikuyuaydinlatma" name="serikuyuaydinlatma" type="radio"
+                                    id="serikuyuaydinlatma" class="form-check-input">
+                                <label class="form-check-label" for="serikuyuaydinlatma">KUYU
+                                    AYDINLATMA</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input value="seriotomatikkapi" name="seriotomatikkapi" type="radio"
+                                    id="seriotomatikkapi" class="form-check-input">
+                                <label class="form-check-label" for="seriotomatikkapi">OTOMATİK KAPI
+                                    TESİSATI</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input value="serimotorkablosu" name="serimotorkablosu" type="radio"
+                                    id="serimotorkablosu" class="form-check-input">
+                                <label class="form-check-label" for="serimotorkablosu">MOTOR
+                                    KABLOSU</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input value="seriasiriyuk" name="seriasiriyuk" type="radio" id="seriasiriyuk"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="seriasiriyuk">AŞIRI
+                                    YÜK SWİTCH BUZZER VE RESET ANAHTARI</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input value="seributon" name="seributon" type="radio" id="seributon"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="seributon">BUTON
+                                    TESİSATI</label>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="mb-3 row border">
+                    <input class="col-12 bg-dark-grey text-center p-3" type="radio" name="paralel_tesisat" id="">
+                    <div class="col-12 bg-dark-grey text-center mb-3"><strong>PARALEL TESİSAT</strong>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <div class="col-lg-3">
+                            <label class="">KABİNDE</label>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="form-check form-check-inline">
+                                <input value="paralelkabingray" name="paralelkabingray" type="radio"
+                                    id="paralelkabingray" class="form-check-input">
+                                <label class="form-check-label" for="paralelkabingray">GRAY
+                                    KOD</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input value="paralelkabinbinary" name="paralelkabinbinary" type="radio"
+                                    id="paralelkabinbinary" class="form-check-input">
+                                <label class="form-check-label" for="paralelkabinbinary">BINARY
+                                    KOD</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input value="paralelkabin7segment" name="paralelkabin7segment" type="radio"
+                                    id="paralelkabin7segment" class="form-check-input">
+                                <label class="form-check-label" for="paralelkabin7segment">7-SEGMENT</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-lg-3">
+                            <label class="">KATLARDA</label>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="form-check form-check-inline">
+                                <input value="katgray" name="katgray" type="radio" id="katgray"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="katgray">GRAY
+                                    KOD</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input value="katbinary" name="katbinary" type="radio" id="katbinary"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="katbinary">BINARY
+                                    KOD</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input value="kat7segment" name="kat7segment" type="radio" id="kat7segment"
+                                    class="form-check-input">
+                                <label class="form-check-label" for="kat7segment">7-SEGMENT</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label class="col-form-label col-lg-3">Durak İsimleri</label>
+                        <div class="col-lg-9">
+                            <input name="durakisimleri" type="text" id="durakisimleri" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row border">
+                    <div class="col-4">
+                        <div class="mb-3 border">
+                            <div class="col-12 bg-dark-grey text-center mb-3"><strong>OPSİYONLAR</strong>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input name="opsiyonlarrevizyon" type="checkbox" id="opsiyonlarrevizyon"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="opsiyonlarrevizyon">Revizyon
+                                            Kutusu</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input name="opsiyonlarpaslanmazkaplama" type="checkbox"
+                                            id="opsiyonlarpaslanmazkaplama" class="form-check-input">
+                                        <label class="form-check-label" for="opsiyonlarpaslanmazkaplama">Paslanmaz
+                                            Kaplama
+                                            Pano</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input name="opsiyonlarpanosehpası" type="checkbox" id="opsiyonlarpanosehpası"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="opsiyonlarpanosehpası">Pano
+                                            Sehpası</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input name="opsiyonlarseslianaons" type="checkbox" id="opsiyonlarseslianaons"
+                                            class="form-check-input">
+                                        <label class="form-check-label" for="opsiyonlarseslianaons">Sesli
+                                            Anons</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="mb-3 border">
+                            <div class="col-12 bg-dark-grey text-center mb-3"><strong>MAKİNE
+                                    DAİRESİ</strong>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input value="makinedairesivar" name="makinedairesivar" type="radio"
+                                            id="makinedairesivar" class="form-check-input">
+                                        <label class="form-check-label" for="makinedairesivar">Mak.
+                                            Dairesi VAR</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input value="makinedaresiyok" name="makinedaresiyok" type="radio"
+                                            id="makinedaresiyok" class="form-check-input">
+                                        <label class="form-check-label" for="makinedaresiyok">Mak.
+                                            Dairesi YOK
+                                            (MRL)</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea name="message" id="message" class="form-control" type="text" placeholder=""
+                        style="height: 10rem;"></textarea>
+                    <label for="message">NOTLAR</label>
+                </div>
+                <div class="d-grid">
+                    <input type="submit" name="submitbuton" value="Gönder" id="submitbuton"
+                        class="btn btn-primary btn-lg" style="background-color: #00acc9;">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
